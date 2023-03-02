@@ -5,9 +5,81 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-secundario);
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --color-primario: #2f67c9;
+  --color-secundario: #76a0e9;
+  --color-blanco: #ffffff;
+  --color-gris: #7f7f82;
+  --color-negro: #0a0000;
+
+}
+
+
+.numeroEnCarrito {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  padding: 0.1rem;
+}
+
+.botonMenu {
+  background-color: transparent;
+  border: 0;
+  color: var(--color-primario);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.listContainer {
+  background-color: #ffffff;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.box {
+  border: #0a0000;
+  background-color: var(--color-gris);
+  color: var(--color-blanco);
+  width: 25%;
+  margin: 1rem;
+  padding: 2rem;
+  text-align: center;
+  align-items: center;
+  box-shadow: 3px 3px 10px var(--color-gris);
+}
+
+h2, h3,h4, h5 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.imgProduct {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  align-items: center;
+  object-fit: contain;
+}
+
+.rowBS {
+  align-items: stretch;
+  justify-content: space-evenly;
 }
