@@ -31,7 +31,7 @@ const ItemListContainer = () => {
 
   return (
     <Container>
-    <Row style={{alignItems:"stretch" , justifyContent:"space-evenly"}}>
+    <Row className='rowBS'>
         {loading ? <Loader /> : <ItemList products={products} /> }
     </Row>
     </Container>
