@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { useParams } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../index.css";
 
@@ -11,10 +11,13 @@ const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
 
+
+const{id} = useParams ();
+
     useEffect(() => {
       setLoading (true);
     
-        const URL = 'https://fakestoreapi.com/products/'
+        const URL = id ? `https://fakestoreapi.com/products/category/${id}`   : 'https://fakestoreapi.com/products/'
         const getCollection = fetch(URL);
 
         getCollection
@@ -25,7 +28,7 @@ const ItemListContainer = () => {
             })
             .catch((err)=>console.log(err))
             .finally(()=> setLoading(false))
-    }, []);
+    }, [id]);
 
 
 
